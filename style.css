@@ -457,4 +457,133 @@ html {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+/* ===================== */
+/* RESPONSIVE MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* Struktur utama */
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Sidebar jadi horizontal */
+  .sidebar {
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+    box-shadow: none;
+  }
+
+  .sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sidebar nav a {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  /* Konten utama */
+  .main-content {
+    padding: 20px;
+  }
+
+  .main-content h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* Dashboard Hero */
+  .dashboard-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-video video {
+    max-height: 200px;
+  }
+
+  /* Cards dashboard */
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+
+  /* Produk */
+  .produk-list {
+    justify-content: center;
+  }
+
+  .produk-item {
+    width: 45%;
+  }
+
+  .produk-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Jenis kulit */
+  .skin-types {
+    justify-content: center;
+  }
+
+  .skin-card {
+    width: 45%;
+  }
+
+  /* Quote */
+  .skincare-quote p {
+    font-size: 16px;
+  }
+
+  /* Modal */
+  .modal-content {
+    margin: 20% auto;
+  }
+}
+
+/* ===================== */
+/* RESPONSIVE HP KECIL */
+/* ===================== */
+@media (max-width: 480px) {
+
+  .sidebar nav a {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .produk-item {
+    width: 100%;
+  }
+
+  .skin-card {
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+}
 
