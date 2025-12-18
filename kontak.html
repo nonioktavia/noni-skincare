@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowUp | Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2> GlowUp</h2>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="jenis-kulit.html"> Jenis Kulit</a>
+        <a href="produk.html"> Produk</a>
+        <a href="tips.html"> Tips</a>
+        <a href="kontak.html" class="active"> Kontak</a>
+      </nav>
+    </aside>
+
+<main class="main-content">
+  <h1>Hubungi Kami</h1>
+
+  <div class="kontak-box">
+    <p>
+      Kami di <b>GlowUp</b> siap membantu kamu menemukan perawatan kulit
+      yang sesuai dengan kebutuhanmu. Jangan ragu untuk menghubungi kami
+      melalui informasi di bawah ini.
+    </p>
+
+    <h3>📩 Informasi Kontak</h3>
+
+    <p>Email:
+      <a href="https://mail.google.com/mail/u/0/#inbox">hello@glowup.id</a>
+    </p>
+
+    <p>Instagram:
+      <a href="https://www.instagram.com/nonioktavias?igsh=anl1enQzNzkxd2c4&utm_source=qr" target="_blank">@glowup.id</a>
+    </p>
+
+    <p>WhatsApp:
+      <a href="https://wa.me/6282286082549" target="_blank">
+        +62 822 8608 2549
+      </a>
+    </p>
+
+    <h3>⏰ Jam Operasional</h3>
+    <p>
+      Senin – Jumat: 08.00 – 17.00 WIB <br>
+      Sabtu: 09.00 – 14.00 WIB <br>
+      Minggu & Hari Libur: Tutup
+    </p>
+<h3>📝 Form Kontak</h3>
+
+<form onsubmit="kirimWhatsApp(event)" class="form-kontak">
+  <input type="text" id="nama" placeholder="Nama Lengkap" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <textarea id="pesan" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+
+  <button type="submit">Kirim Pesan</button>
+</form>
+
+    <p>
+      Terima kasih telah mempercayai <b>GlowUp</b>
+      sebagai partner perawatan kulitmu 💖
+    </p>
+  </div>
+</main>
+<script>
+function kirimWhatsApp(event) {
+  event.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const pesan = document.getElementById("pesan").value;
+
+  alert("Pesan kamu akan dikirim ke WhatsApp 😊");
+
+  const nomorWA = "6282286082549"; // ganti kalau perlu
+  const text = `Halo GlowUp 👋
+Nama: ${nama}
+Email: ${email}
+Pesan: ${pesan}`;
+
+  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+
+  </div>
+</body>
+</html>
